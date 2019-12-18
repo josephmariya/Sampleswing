@@ -45,7 +45,7 @@ public class Celciusfarenheit {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel l1 = new JLabel("Degrees");
+		JLabel l1 = new JLabel("Degrees");//label
 		l1.setBounds(47, 45, 79, 20);
 		frame.getContentPane().add(l1);
 		
@@ -54,7 +54,7 @@ public class Celciusfarenheit {
 		frame.getContentPane().add(t1);
 		t1.setColumns(10);
 		
-		JLabel l2 = new JLabel("Result =");
+		JLabel l2 = new JLabel("Result =");//label
 		l2.setBounds(47, 122, 46, 14);
 		frame.getContentPane().add(l2);
 		
@@ -63,27 +63,27 @@ public class Celciusfarenheit {
 		frame.getContentPane().add(t2);
 		t2.setColumns(10);
 		
-		JButton b1 = new JButton("To Kelvin");
+		JButton b1 = new JButton("To Kelvin");//Button used for convert degree to kelvin
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String f1=t1.getText();
-				float f2=Float.parseFloat(f1);
-				float c=(float)((f2+273.15));
-				String str1=String.valueOf(c);
-				t2.setText(str1);
+				float f2=Float.parseFloat(f1);//Convert to float
+				float c=(float)((f2+273.15));//Equation for kelvin
+				String str1=String.valueOf(c);//Convert to string
+				t2.setText(str1);//Set output into textfield in the form of string
 			}
 		});
 		b1.setBounds(57, 190, 89, 23);
 		frame.getContentPane().add(b1);
 		
-		JButton b2 = new JButton("To Farenheit");
+		JButton b2 = new JButton("To Farenheit");//Button used for convert degree to farenheit
 		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String c1=t1.getText();
 				float c2=Float.parseFloat(c1);
-				float f=(float)((1.8)*c2+32);
-				String str=String.valueOf(f);
-				t2.setText(str);
+				float f=(float)((1.8)*c2+32);//Equation for farenheit
+				String str=String.valueOf(f);//Convert to string
+				t2.setText(str);//Set output into textfield in the form of string
 			}
 		});
 		b2.setBounds(166, 190, 89, 23);
